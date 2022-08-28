@@ -32,7 +32,7 @@ ModHeroId.post("/test/mod-hero-id", async (req, res) => {
             values: [title, subtitle, link, tag, tipo, color, idHero]
         })
     } finally {
-
+        console.log('result1 :>> ', result1);
         const rowsAff = parseInt(result1.affectedRows)
 
         if (rowsAff > 0) {
