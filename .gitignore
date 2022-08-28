@@ -1,0 +1,8 @@
+node_modules
+.env
+Public
+certificate.crt
+private.key
+src/routes/Test/Global
+src/Global
+src/lib/Afip
