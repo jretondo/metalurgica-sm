@@ -5,7 +5,6 @@ const Consultador = require("../../../../database/Consultador")
 ModHeroId.post("/test/mod-hero-id", async (req, res) => {
     const query = Consultador()
     const request = req.body
-    console.log(`request`, request)
     const idHero = request.id
     const title = request.title
     const subtitle = request.subtitle
@@ -32,7 +31,6 @@ ModHeroId.post("/test/mod-hero-id", async (req, res) => {
             values: [title, subtitle, link, tag, tipo, color, idHero]
         })
     } finally {
-        console.log('result1 :>> ', result1);
         const rowsAff = parseInt(result1.affectedRows)
 
         if (rowsAff > 0) {

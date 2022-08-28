@@ -24,7 +24,7 @@ function Consultador() {
     setTimeout(() => {
         conn.destroy()
         console.log("desconectado de " + databaseName)
-    }, 50000);
+    }, 5000);
 
     return util.promisify(conn.query).bind(conn);
 }
