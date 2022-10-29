@@ -23,7 +23,7 @@ EliminarHero.post("/test/delete-hero-id", async (req, res) => {
         const rowsAff = parseInt(result1.affectedRows)
 
         if (rowsAff > 0) {
-            const imageName = idHero.id + ".jpg"
+            const imageName = idHero + ".jpg"
             const directory = path.join(__dirname, '..', '..', '..', '..', 'Public', 'Imagenes', 'HeroSlider', imageName)
             console.log('directory :>> ', directory);
             fs.rmdir(directory, { recursive: true })
