@@ -26,7 +26,7 @@ EliminarHero.post("/test/delete-hero-id", async (req, res) => {
             const imageName = idHero + ".jpg"
             const directory = path.join(__dirname, '..', '..', '..', '..', 'Public', 'Imagenes', 'HeroSlider', imageName)
             console.log('directory :>> ', directory);
-            fs.rmdir(directory)
+            fs.rm(directory)
 
             respuesta = {
                 status: 200,
