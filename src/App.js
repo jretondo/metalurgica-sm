@@ -11,7 +11,7 @@ var fs = require('fs'),
 
 
 const ENTORNO = process.env.ENTORNO
-app.use("/public", express.static(path.join(__dirname, "Public")));
+
 app.use(bodyParser.json())
 app.use(express.json())
 
@@ -34,6 +34,7 @@ if (ENTORNO === "WINDOWS") {
         console.log("Express server listening on port " + PORT)
     });
 }
+app.use("/public", express.static(path.join(__dirname, "..", "Public")));
 
 app.use(require("./routes/Test/Index"))
 
