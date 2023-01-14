@@ -17,7 +17,7 @@ EnviarEmaiMkt.post('/test/EnviarEmaiMkt', async (req, res) => {
     const asunto = req.body.asunto
     const isSecure = await SecureVerify(token)
     //const url = "http://192.168.0.11:3001"
-    const url = "https://cordobabaitcast.com.ar"
+    const url = "https://metalurgicasm.nekoadmin.com.ar"
     let productsList = []
     let fallados = []
     if (isSecure) {
@@ -99,7 +99,7 @@ EnviarEmaiMkt.post('/test/EnviarEmaiMkt', async (req, res) => {
                         }
 
                         await ejs.renderFile(path.join("views", "Emails", "Templates", "ForgotPass.ejs"), datos3, async function (err, data2) {
-                            await SendEmail(process.env.SENDER_EMAIL_CONF_INFO, process.env.SENDER_EMAIL_INFO, "info@cordobabaitcast.com.ar", asunto, data2)
+                            await SendEmail(process.env.SENDER_EMAIL_CONF_INFO, process.env.SENDER_EMAIL_INFO, "info@metalurgicasm.com.ar", asunto, data2)
                         })
                     }
                 })

@@ -11,6 +11,16 @@ const SendEmail = async (senderConf, sender, recepter, subject, msg) => {
         }
     })
 
+    console.log('object :>> ', {
+        host: process.env.HOST_EMAIL,
+        post: process.env.PORT_EMAIL,
+        secure: true,
+        auth: {
+            user: senderConf,
+            pass: process.env.PASS_EMAIL
+        }
+    });
+
     return await tranporter.sendMail({
         from: sender,
         to: recepter,
