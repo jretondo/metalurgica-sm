@@ -137,7 +137,7 @@ NvoHeroId.post("/test/nvo-prod", async (req, res) => {
                     } finally {
                         const idImg = parseInt(result3.insertId)
                         const ubicacion = path.join('Public', 'Imagenes', 'Productos', idImg + ".jpg")
-                        const origen = links.replace("https://cordobabaitcast.com.ar/NodeServer/Public/Imagenes/Productos", path.join('Public', 'Imagenes', 'Productos'))
+                        const origen = links.replace("https://nekoadmin.com.ar:3015/public/Imagenes/Productos", path.join('Public', 'Imagenes', 'Productos'))
 
                         fs.copyFile(origen, ubicacion, (err) => {
                             if (err) throw err

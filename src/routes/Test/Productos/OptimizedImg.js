@@ -1,7 +1,7 @@
 const express = require('express')
 const Optimizador = express()
 const tinify = require("tinify");
-tinify.key = "bbb5LGP5xPyXgrhYyS8BzB8NFfkLchtv";
+tinify.key = process.env.TINIFY_KEY;
 const path = require('path');
 
 Optimizador.post('/test/optimizador-img-prod', async (req, res) => {
